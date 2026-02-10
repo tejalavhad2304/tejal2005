@@ -1,4 +1,4 @@
-# 
+
 from django.shortcuts import render, redirect
 from .models import contact
 
@@ -6,7 +6,7 @@ def contact_view(request):
     if request.method == "POST":
         name = request.POST.get("name")
         email = request.POST.get("email")
-        phone = request.POST.get("phone")   # ← space काढला
+        phone = request.POST.get("phone")   
         message = request.POST.get("message")
 
         contact.objects.create(
